@@ -1,0 +1,15 @@
+13:51:57.436 [main] INFO  com.hybrid.baseclass.Base - Calling the super class constructor to initialize the properties of config file
+13:52:07.840 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware
+13:52:09.252 [main] INFO  com.hybrid.baseclass.Base - user name entered is : 310259920
+13:52:09.272 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware Application Server
+13:52:14.125 [main] INFO  com.hybrid.baseclass.Base - clicked on login button
+13:52:35.249 [main] INFO  com.hybrid.baseclass.Base - Retriving data from getTestData method available in testutils class
+13:52:56.916 [main] INFO  com.hybrid.baseclass.Base - browser closed
+14:27:26.997 [main] INFO  com.hybrid.baseclass.Base - Calling the super class constructor to initialize the properties of config file
+14:27:42.218 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware
+14:27:44.038 [main] INFO  com.hybrid.baseclass.Base - user name entered is : 310259920
+14:27:44.039 [main] INFO  com.hybrid.baseclass.Base - password entered is : Planisware@63
+14:27:44.117 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware Application Server
+14:27:49.066 [main] INFO  com.hybrid.baseclass.Base - clicked on login button
+14:28:12.253 [main] INFO  com.hybrid.baseclass.Base - Retriving data from getTestData method available in testutils class
+14:28:34.126 [main] INFO  com.hybrid.baseclass.Base - browser closed

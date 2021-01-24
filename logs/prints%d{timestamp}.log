@@ -1,0 +1,5 @@
+17:06:01.283 [main] INFO  com.hybrid.baseclass.Base - password entered is : Planisware@63
+17:06:01.316 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware Application Server
+17:06:07.131 [main] INFO  com.hybrid.baseclass.Base - clicked on login button
+17:06:32.872 [main] INFO  com.hybrid.baseclass.Base - Retriving data from getTestData method available in testutils class
+17:06:55.824 [main] INFO  com.hybrid.baseclass.Base - browser closed

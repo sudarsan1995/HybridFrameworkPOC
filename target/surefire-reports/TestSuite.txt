@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 76.136 s <<< FAILURE! - in TestSuite
+com.hybrid.testcases.LoginFunctionality.b_loginClick  Time elapsed: 7.448 s  <<< FAILURE!
+java.lang.AssertionError: expected [Planisware 6 - Home] but found [Planisware]
+	at com.hybrid.testcases.LoginFunctionality.b_loginClick(LoginFunctionality.java:82)
+
+com.hybrid.testcases.LoginFunctionality.c_ProgramCreation  Time elapsed: 21.005 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[@aria-label='Programs']"}
+  (Session info: MicrosoftEdge=87.0.664.75)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'L-156180933', ip: '192.168.225.45', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 87.0.664.75, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:58314}, msedge: {msedgedriverVersion: 87.0.664.75 (4da88d617daabd..., userDataDir: C:\Users\SU316247\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ce9617e817072394122840584fd2674b
+*** Element info: {Using=xpath, value=//div[@aria-label='Programs']}
+	at com.hybrid.testcases.LoginFunctionality.c_ProgramCreation(LoginFunctionality.java:92)
+
+com.hybrid.testcases.LoginFunctionality.d_enteringDataInProgramCreationForm[TestProgram, Test@123, O11-Space Others MAG, New Business, Test@123, 3.10307356E8, 3.1025992E8](1)  Time elapsed: 20.401 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[@aria-label='New']"}
+  (Session info: MicrosoftEdge=87.0.664.75)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'L-156180933', ip: '192.168.225.45', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 87.0.664.75, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:58314}, msedge: {msedgedriverVersion: 87.0.664.75 (4da88d617daabd..., userDataDir: C:\Users\SU316247\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ce9617e817072394122840584fd2674b
+*** Element info: {Using=xpath, value=//div[@aria-label='New']}
+	at com.hybrid.testcases.LoginFunctionality.d_enteringDataInProgramCreationForm(LoginFunctionality.java:100)
+
