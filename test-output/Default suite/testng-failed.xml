@@ -8,8 +8,6 @@
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="b_loginClick"/>
-          <include name="c_ProgramCreation"/>
-          <include name="d_enteringDataInProgramCreationForm" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.hybrid.testcases.LoginFunctionality -->
     </classes>

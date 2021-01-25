@@ -7,6 +7,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -28,6 +31,8 @@ public class TestUtils extends Base{
 	public static String edgedriver=pro.getProperty("edgebrowser");
 	public static Workbook book;
 	public static Sheet sheet;
+	public static Row row;
+	public static Cell cell;
 	
 	public static String ExcelPath=System.getProperty("user.dir")+"/src/main/java/com/hybrid/testdatas/testdata.xlsx";
 	
@@ -62,15 +67,15 @@ public class TestUtils extends Base{
 		
 		for(int i=0;i<sheet.getLastRowNum();i++)
 		{
-			for(int k=0;k<sheet.getRow(0).getLastCellNum();k++)
+			for(int k=0;k<sheet.getRow(0).getLastCellNum();k++)	
+				
 			{
 				data[i][k]=sheet.getRow(i+1).getCell(k).toString();
 			}
 		}
 		return data;
 		
-		
-		
+	
 		
 	}
 	

@@ -34,22 +34,23 @@ public class stepDefinition extends Base{
 		
 	}
 	
-	@Then("click on progream module new program")
-	public void click_on_progream_module_new_program()
+	@When("click on progream module new program and fill all the mandatory fields")
+	public void click_on_progream_module_new_program_and_fill_all_the_mandatory_fields()
 	{
 		
 	}
 	
-	@Then("fill all the mandatory fields")
-	public void fill_all_the_mandatory_fields()
-	{
-		System.out.println("home module is available");
-	}
 	
 	@Then("click on Ok")
 	public void click_on_Ok()
 	{
 		System.out.println("home module is available");
+	}
+	
+	@And("See Program created is available or not")
+	public void See_Program_created_is_available_or_not()
+	{
+		
 	}
 	
 	

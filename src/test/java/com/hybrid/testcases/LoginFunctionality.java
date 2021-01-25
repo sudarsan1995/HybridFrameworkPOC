@@ -94,19 +94,18 @@ public class LoginFunctionality extends Base{
 		
 	}
 	
+	
+	
 	@Test(dataProvider="getTestDatFromExcel")
-	public void d_enteringDataInProgramCreationForm(String progDesc,String pgmLeg,String busOwner,String innoClass,String strgicInno,String prodMnger,String busContr)
+	public void d_enteringDataInProgramCreationForm(String progDesc,String pgmLeg,String busOwner,String innoClass,String strgicInno,String prodMnger,String busContr) throws InterruptedException
 	{
 		programcreation.clickOnNewProgram();
 		
 		logger.info("clicked on New Program ");
 		
 		programcreation.creationForm(progDesc, pgmLeg, busOwner, innoClass, strgicInno, prodMnger, busContr);
-		
-		
-		logger.info("program descriptio is :" +progDesc , "Program Legacy id is :" +pgmLeg , 
-			"Program business owner is :" +busOwner , "Innovation classification is:" +strgicInno,
-			"Product Manager is :" +prodMnger , "Controller is :" +busContr);
+		System.out.println(prodMnger);
+		logger.info("Values are filled in fields");
 	}
 	
 	@DataProvider
@@ -123,8 +122,8 @@ public class LoginFunctionality extends Base{
 	@AfterTest
 	public void tearDown()
 	{
-		driver.close();
-		logger.info("browser closed");
+		//driver.close();
+		//logger.info("browser closed");
 		
 	}
 	
