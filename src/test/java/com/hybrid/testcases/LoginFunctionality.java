@@ -39,6 +39,7 @@ public class LoginFunctionality extends Base{
 	public void setUp()
 	{
 		initialization();
+		driver.navigate().refresh();
 		login1 =new LoginPage_01();
 		login2=new LoginPage_02();
 		homepage=new Homepage();
@@ -74,26 +75,35 @@ public class LoginFunctionality extends Base{
 		logger.info("title of this page is : " +homepagetitle);
 		
 	}
-	
+
 	
 	@Test
-	public void d_ProgramCreation()
+	public void c_ProgramCreation()
 	{
+		
 		homepage.programClick();
+		
 		logger.info("clicked on Program module ");
 		
 	}
 	
-	/*
+	
 	
 	@Test(dataProvider="getTestDatFromExcel")
-	public void e_enteringDataInProgramCreationForm(String progDesc,String pgmLeg,String busOwner,String innoClass,String strgicInno,String prodMnger,String busContr) throws InterruptedException
+	public void d_enteringDataInProgramCreationForm(String progDesc,String pgmLeg,String busOwner,String innoClass,String strgicInno,String prodMnger,String busContr) throws InterruptedException
 	{
 		programcreation.clickOnNewProgram();
 		logger.info("clicked on New Program ");
 		programcreation.creationForm(progDesc, pgmLeg, busOwner, innoClass, strgicInno, prodMnger, busContr);
-		System.out.println(prodMnger);
+	
 		logger.info("Values are filled in fields");
+	}
+	
+	@Test
+	public void e_validateCreatedProgramAndClosetheProgram() throws InterruptedException
+	{
+		programcreation.validateProgram();
+		
 	}
 	
 	@DataProvider
@@ -107,29 +117,18 @@ public class LoginFunctionality extends Base{
 	
 	}
 	
-	*/
-
 	@Test
-	public void c_validatePopupInProgramCreationForm()
+	public void f_validatePopupInProgramCreationForm() throws InterruptedException
 	{
 		homepage.programClick();
-		programcreation.clickOnNewProgram();
-		programcreation.validatePopupInProgramCreationForm();
+		programcreation.validatePopupInProgramCreationForm();	
 	}
-	
-	/*
 	 
-	@Test
-	public void f_validateCreatedProgram()
-	{
-		programcreation.validateProgram();
-	}
-	
-	*/
 	
 	@Test
 	public void g_logOut()
 	{
+		homepage.mainMenu();
 		homepage.logOut();
 	}
 	
@@ -137,8 +136,9 @@ public class LoginFunctionality extends Base{
 	@AfterTest
 	public void tearDown()
 	{
-		driver.close();
+		//driver.close();
 		logger.info("browser closed");
 		
 	}
+
 }

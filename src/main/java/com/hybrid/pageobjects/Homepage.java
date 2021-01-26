@@ -1,6 +1,7 @@
 package com.hybrid.pageobjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -35,8 +36,13 @@ public class Homepage extends Base {
 	@FindBy(xpath="//div[@aria-label='Resources']")
 	WebElement ResourcesModule;
 	
-	@FindBy(xpath="//img[@alt='ic_power_settings_new_white_48']")
+	@FindBy(xpath="//div[@id='sa165142']")
 	WebElement logoout;
+	
+	
+	
+	@FindBy(xpath="//div[@aria-label='Planisware menu']")
+	WebElement mainmenu;
 	
 	
 	public Homepage()
@@ -58,21 +64,27 @@ public class Homepage extends Base {
 	
 	public void programClick()
 	{
+		programsmodule1.click();
 		
-		if(programsmodule1.equals("Programs"))
-		{
-			programsmodule1.click();
-		}
-		else 
-		{
-			programmodule2.click();
-		}
+	}
+	
+	public void programClick2()
+	{
+		programmodule2.click();
+		
 	}
 	
 	public void logOut()
 	{
 		logoout.click();
 	
+	}
+	
+	
+
+	public  void mainMenu()
+	{
+		mainmenu.click();
 	}
 	
 	
