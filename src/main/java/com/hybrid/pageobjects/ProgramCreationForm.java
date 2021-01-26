@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.hybrid.baseclass.Base;
 
@@ -65,6 +66,12 @@ public class ProgramCreationForm extends Base {
 	@FindBy(xpath="//button[@class='plw63 font27']")
 	WebElement ok;
 	
+	@FindBy(xpath="//textarea[@id='object92130']")
+	WebElement alertpopup;
+	
+	@FindBy(xpath="(//button[@onmouseleave='plw.tooltip.clearTooltip();'])[1]")
+	WebElement alertpopupOkButton;
+	
 	
 	public ProgramCreationForm()
 	{
@@ -101,54 +108,64 @@ public class ProgramCreationForm extends Base {
 		champ.executeScript("arguments[0].click();", cham);
 		
 		Thread.sleep(3000);
-
-		/*
 		
-		programdescription.sendKeys(progDesc);
-		programdescription.sendKeys(Keys.ENTER);	
-		
-	
-		
-		proglegacyid.sendKeys(pgmLegId);
-		proglegacyid.sendKeys(Keys.ENTER);
-		
-		businessowner.sendKeys(busOwn);
-		businessowner.sendKeys(Keys.ENTER);
-		
-		innoclas.sendKeys(Keys.CLEAR);
-		innoclas.sendKeys(innoClas);
-		innoclas.sendKeys(Keys.ENTER);
-		
-		straInit.sendKeys(strgicInni);
-		
-				*/
 		
 		Actions move=new Actions(driver);
 		move.moveToElement(productmanager).doubleClick().sendKeys(Keys.DELETE).sendKeys(Keys.ENTER).sendKeys(prodMngr).sendKeys(Keys.ENTER).build().perform();
-		move.moveToElement(controller).doubleClick().sendKeys(Keys.DELETE).sendKeys(Keys.ENTER).sendKeys(prodMngr).sendKeys(Keys.ENTER).build().perform();
-	/*
-		
-		productmanager.sendKeys(Keys.CLEAR);
-		productmanager.sendKeys(prodMngr);
-		productmanager.sendKeys(Keys.DOWN);
-		productmanager.sendKeys(Keys.ENTER);
-		
-	
-		
-		Thread.sleep(2000);
-		controller.sendKeys(Keys.CLEAR);
-		controller.sendKeys(busCont);	
-		controller.sendKeys(Keys.DOWN);
-		controller.sendKeys(Keys.ENTER);
-	
-		ok.click();		
-		
-		*/
+		move.moveToElement(controller).doubleClick().sendKeys(Keys.DELETE).sendKeys(Keys.ENTER).sendKeys(busCont).sendKeys(Keys.ENTER).build().perform();
+		programdescription.sendKeys(progDesc);
+		programdescription.sendKeys(Keys.ENTER);
+		proglegacyid.sendKeys(pgmLegId);
+		proglegacyid.sendKeys(Keys.ENTER);
+		businessowner.sendKeys(busOwn);
+		businessowner.sendKeys(Keys.ENTER);
+		innoclas.sendKeys(innoClas);
+		innoclas.sendKeys(Keys.ENTER);
+		straInit.sendKeys(strgicInni);
+		straInit.sendKeys(Keys.ENTER);
+		ok.click();
 	
 	}
 	
 	
+	
+	public void validateProgram()
+	{
+		String before_xpath="(//table[@role='presentation'])[2]//colgroup//following-sibling::tbody[1]//tr[";
+		String after_xpath="]//td[6]";
+		String programid="]//td[3]";
+		
+		for(int i=1;i<=7;i++)
+		{
+			String prgname=driver.findElement(By.xpath(before_xpath+i+after_xpath)).getText();
+			String progid=driver.findElement(By.xpath(before_xpath+1+programid)).getText();
+			System.out.println(prgname);
+	
+			if(prgname.contains("TestProgram"))
+			{
+				Assert.assertTrue(true, "Created program available in list");
+				driver.findElement(By.xpath("(//table[@role='presentation'])[2]//colgroup//following-sibling::tbody[1]//tr[" +i+ "]//td[2]")).click();
+				System.out.println("Opened program id is " +progid+ "and the program desc :" +prgname );
+
+					
+			}		
+	}
+	
+	}	
+	
+	
+	public void validatePopupInProgramCreationForm()
+	{
+		newprogram.click();
+		programcreationbutton.click();
+		ok.click();
+		Assert.assertTrue(alertpopup.isDisplayed(), "Alert getting displayed");
+		alertpopupOkButton.click();
+	}
 }
+
+
+
 
 
 

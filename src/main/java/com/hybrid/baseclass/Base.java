@@ -73,6 +73,7 @@ public class Base {
 		driver.manage().deleteAllCookies();
 		
 		driver.get(pro.getProperty("url"));
+		
 	}
 
 }

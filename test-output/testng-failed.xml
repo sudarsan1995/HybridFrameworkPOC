@@ -5,9 +5,13 @@
     <classes>
       <class name="com.hybrid.testcases.LoginFunctionality">
         <methods>
+          <include name="a_LoginCrendentials"/>
+          <include name="d_ProgramCreation"/>
+          <include name="c_validatePopupInProgramCreationForm"/>
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="b_loginClick"/>
+          <include name="g_logOut"/>
         </methods>
       </class> <!-- com.hybrid.testcases.LoginFunctionality -->
     </classes>
