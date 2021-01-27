@@ -3,16 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.hybrid.testcases.LoginFunctionality">
+      <class name="com.hybrid.testcases.Demotestcase">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
           <include name="b_loginClick"/>
-          <include name="f_validatePopupInProgramCreationForm"/>
-          <include name="e_validateCreatedProgramAndClosetheProgram"/>
-          <include name="g_logOut"/>
         </methods>
-      </class> <!-- com.hybrid.testcases.LoginFunctionality -->
+      </class> <!-- com.hybrid.testcases.Demotestcase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
