@@ -112,10 +112,6 @@ public class ProgramCreationForm extends Base {
 		
 		Thread.sleep(3000);
 		
-		
-		Actions move=new Actions(driver);
-		move.moveToElement(productmanager).doubleClick().sendKeys(Keys.DELETE).sendKeys(Keys.ENTER).sendKeys(prodMngr).sendKeys(Keys.ENTER).build().perform();
-		move.moveToElement(controller).doubleClick().sendKeys(Keys.DELETE).sendKeys(Keys.ENTER).sendKeys(busCont).sendKeys(Keys.ENTER).build().perform();
 		programdescription.sendKeys(progDesc);
 		programdescription.sendKeys(Keys.ENTER);
 		proglegacyid.sendKeys(pgmLegId);
@@ -123,11 +119,18 @@ public class ProgramCreationForm extends Base {
 		businessowner.sendKeys(busOwn);
 		businessowner.sendKeys(Keys.ENTER);
 		innoclas.sendKeys(innoClas);
-		
 		innoclas.sendKeys(Keys.ENTER);
+		Thread.sleep(2000);
+		
+		
+		Actions move=new Actions(driver);
+		move.moveToElement(productmanager).doubleClick().sendKeys(Keys.DELETE).sendKeys(Keys.ENTER).sendKeys(prodMngr).sendKeys(Keys.ENTER).build().perform();
+		Thread.sleep(2000);
+		move.moveToElement(controller).doubleClick().sendKeys(Keys.DELETE).sendKeys(Keys.ENTER).sendKeys(busCont).sendKeys(Keys.ENTER).build().perform();
 		Thread.sleep(2000);
 		straInit.sendKeys(strgicInni);
 		straInit.sendKeys(Keys.ENTER);
+		
 		ok.click();
 		Thread.sleep(2000);
 		
@@ -143,6 +146,7 @@ public class ProgramCreationForm extends Base {
 		String after_xpath="]//td[6]";
 		String programid="]//td[4]";
 		
+		
 		for(int i=1;i<=7;i++)
 		{
 			String prgname=driver.findElement(By.xpath(before_xpath+i+after_xpath)).getText();
@@ -152,21 +156,24 @@ public class ProgramCreationForm extends Base {
 			if(prgname.contains("TestProgram") && progid.contains(progid))
 			{
 				Assert.assertTrue(true);
-				WebElement open=driver.findElement(By.xpath("(//table[@role='presentation'])[2]//colgroup//following-sibling::tbody[1]//tr[1]//td[2]"));
+				WebElement open=driver.findElement(By.xpath("(//table[@role='presentation'])[2]//colgroup//following-sibling::tbody[1]//tr["+i+"]//td[2]"));
 				open.click();
+				System.out.println("program opened successfully");
 				Thread.sleep(5000);
-			}	else
-			{
-				Assert.assertTrue(false);
-			}
-	}
+				
 				Actions s=new Actions(driver);
 				s.moveToElement(backtolist).click().build().perform();
-				System.out.println("clicked successfully");
-		
-	}	
-	
-	
+				System.out.println("back to list button clicked successfully");
+				Thread.sleep(5000);
+				driver.findElement(By.xpath("(//table[@role='presentation'])[2]//colgroup//following-sibling::tbody[1]//tr["+i+"]//td[2]")).click();;
+				System.out.println("close the program successfully in the program list view");
+				
+				break; }
+			
+			else {  Assert.assertTrue(false); }
+			
+			}
+	}
 	
 	public void validatePopupInProgramCreationForm() throws InterruptedException
 	{

@@ -39,7 +39,7 @@ public class LoginFunctionality extends Base{
 	public void setUp()
 	{
 		initialization();
-		driver.navigate().refresh();
+		
 		login1 =new LoginPage_01();
 		login2=new LoginPage_02();
 		homepage=new Homepage();
@@ -82,7 +82,6 @@ public class LoginFunctionality extends Base{
 	{
 		
 		homepage.programClick();
-		
 		logger.info("clicked on Program module ");
 		
 	}
@@ -95,7 +94,6 @@ public class LoginFunctionality extends Base{
 		programcreation.clickOnNewProgram();
 		logger.info("clicked on New Program ");
 		programcreation.creationForm(progDesc, pgmLeg, busOwner, innoClass, strgicInno, prodMnger, busContr);
-	
 		logger.info("Values are filled in fields");
 	}
 	
@@ -120,10 +118,9 @@ public class LoginFunctionality extends Base{
 	@Test
 	public void f_validatePopupInProgramCreationForm() throws InterruptedException
 	{
-		homepage.programClick();
+		
 		programcreation.validatePopupInProgramCreationForm();	
 	}
-	 
 	
 	@Test
 	public void g_logOut()
@@ -132,13 +129,11 @@ public class LoginFunctionality extends Base{
 		homepage.logOut();
 	}
 	
-	
 	@AfterTest
 	public void tearDown()
 	{
 		//driver.close();
 		logger.info("browser closed");
-		
 	}
 
 }
