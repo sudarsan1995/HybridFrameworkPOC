@@ -3,6 +3,7 @@ package com.hybrid.pageobjects;
 import java.awt.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -36,6 +37,21 @@ public class ProjectCreationProjectList extends Base{
 	
 	@FindBy(xpath="//button[contains(text(),'OK')]")
 	WebElement Ok;
+	
+	@FindBy(xpath="//div[@style='width:16px']")
+	WebElement dateicon;
+	
+	@FindBy(xpath="//div[@id='object44244']//preceding-sibling::div[@id='object44052']")
+	WebElement monthSelection;
+	
+	@FindBy(xpath="(//table[starts-with(@id,'string44')])[1]//tbody/tr//td")
+	WebElement yearSelection;
+	
+	@FindBy(xpath="//div[@class='ss-scroll']")
+	WebElement verticalScrollbar;
+	
+	@FindBy(xpath="//div[@class='ss-scroll rtl']")
+	WebElement horizontalScrollbar;
 	
 	public ProjectCreationProjectList()
 	{
@@ -72,7 +88,9 @@ public class ProjectCreationProjectList extends Base{
 			}
 		}
 		
-		searchboxinInsertColumnwindow.sendKeys("has a business case");
+		searchboxinInsertColumnwindow.sendKeys(Keys.CONTROL+ "a");
+		searchboxinInsertColumnwindow.sendKeys(Keys.DELETE);
+		searchboxinInsertColumnwindow.sendKeys(passingvalue);
 		
 		Thread.sleep(3000);
 		
@@ -90,21 +108,66 @@ public class ProjectCreationProjectList extends Base{
 				Ok.click();
 				break;	
 			}
+			
+			else {
+				Assert.assertTrue(false);
+			}
 
 			
 		}
 		
+	}
 	
+	public void scrolling() throws InterruptedException
+	{
 		
+		WebElement startdate=driver.findElement(By.xpath("(//table[@role='presentation'])[2]//colgroup//following-sibling::tbody[1]//tr[1]//td[20]"));
 		
+		 
+		JavascriptExecutor je= (JavascriptExecutor) driver;
+		je.executeScript("arguments[0].scrollIntoView(true)", startdate);
+		Thread.sleep(3000);
 		
+	}
 	
+	public void choosingStartdate_EndDate() throws InterruptedException
+	{
 		
-				
+		String beforeXpath="(//table[@gui='63'])[1]//colgroup//following-sibling::tbody//tr[";
+		String afterXpath="]";
+		WebElement startdate=driver.findElement(By.xpath("(//table[@role='presentation'])[2]//colgroup//following-sibling::tbody[1]//tr[1]//td[17]"));
+		String desiredDate="14-February-2022";
+		String separator[]=desiredDate.split("-");
+		String date=separator[0];
+		String month=separator[1];
+		String year=separator[2];
+		
+		
+		startdate.click();
+		
+		dateicon.click();
+		Thread.sleep(3000);
+		monthSelection.click();
+		Thread.sleep(3000);
+		for(int i=1;i<=12;i++)
+		{
+			String monthvalues=driver.findElement(By.xpath(beforeXpath+i+afterXpath)).getText();
+			System.out.println(monthvalues);
 			
+			if(monthvalues.contains(month)) {
+				
+				Assert.assertTrue(true);
+				driver.findElement(By.xpath(beforeXpath+i+afterXpath)).click();
+				Thread.sleep(3000);
+				break;
+			}
+			}
+		}
+		
+		
+		
 		
 	}
 	
 	
 			
-}

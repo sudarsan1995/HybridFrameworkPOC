@@ -69,15 +69,28 @@ public class Demotestcase extends Base {
 		
 	}
 	
+	/*
 	@Test
 	public void c_addingColumn() throws InterruptedException
 	{
 		homepage.programClick();
-		
 		System.out.println("righ clicked");
 		Thread.sleep(3000);
 		projlist.addingColumn();
 		System.out.println("column added into the view");
+	}
+	
+	*/
+	
+	@Test
+	public void d_selectingStartAndEndDate() throws InterruptedException
+	{
+		homepage.projectClick();
+		
+		projlist.scrolling();
+		projlist.choosingStartdate_EndDate();
+		
+		
 	}
 	
 	@Test

@@ -74,6 +74,13 @@ public class Homepage extends Base {
 		
 	}
 	
+	public void projectClick()
+	{
+		ProjectsModule.click();
+		
+	}
+	
+	
 	public void logOut()
 	{
 		logoout.click();
