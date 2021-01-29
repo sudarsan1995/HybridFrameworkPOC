@@ -1,6 +1,6 @@
 package com.hybrid.pageobjects;
 
-import java.awt.List;
+import java.util.*;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -44,7 +44,7 @@ public class ProjectCreationProjectList extends Base{
 	@FindBy(xpath="//div[@id='object44244']//preceding-sibling::div[@id='object44052']")
 	WebElement monthSelection;
 	
-	@FindBy(xpath="(//table[starts-with(@id,'string44')])[1]//tbody/tr//td")
+	@FindBy(xpath="//div[@id='object44760']//preceding-sibling::div[@id='object44558']")
 	WebElement yearSelection;
 	
 	@FindBy(xpath="//div[@class='ss-scroll']")
@@ -130,13 +130,13 @@ public class ProjectCreationProjectList extends Base{
 		
 	}
 	
-	public void choosingStartdate_EndDate() throws InterruptedException
+	public void choosingDateFromDateField() throws InterruptedException
 	{
 		
 		String beforeXpath="(//table[@gui='63'])[1]//colgroup//following-sibling::tbody//tr[";
 		String afterXpath="]";
 		WebElement startdate=driver.findElement(By.xpath("(//table[@role='presentation'])[2]//colgroup//following-sibling::tbody[1]//tr[1]//td[17]"));
-		String desiredDate="14-February-2022";
+		String desiredDate="1-February-2022";
 		String separator[]=desiredDate.split("-");
 		String date=separator[0];
 		String month=separator[1];
@@ -161,8 +161,61 @@ public class ProjectCreationProjectList extends Base{
 				Thread.sleep(3000);
 				break;
 			}
-			}
 		}
+		
+		yearSelection.click();
+		Thread.sleep(2000);
+		
+		
+		List <WebElement> listofyear=driver.findElements(By.xpath("(//table[@gui='63'])[1]//colgroup//following-sibling::tbody//tr"));
+		
+				int sizeofyearvalues=listofyear.size();
+		
+		for(int i=0;i<=sizeofyearvalues;i++)
+		{
+			String textofyear=listofyear.get(i).getText();
+			System.out.println(textofyear);
+			
+			if(textofyear.equals(year))
+					{
+				i++;
+				Assert.assertTrue(true);
+				driver.findElement(By.xpath(beforeXpath+i+afterXpath)).click();
+				Thread.sleep(3000);
+				break;
+				
+					}
+		}
+		
+		
+		String beforeXpathDate="//div[@id='object152022']//canvas//following-sibling::div[";
+		String afterXpathDate="]";
+		
+	
+		
+		List<WebElement> listofdays=driver.findElements(By.xpath("//table[@id='string152022']"));
+		System.out.println("list of days showned " +listofdays);
+		
+		int valueofdays=listofdays.size();
+		
+		for(int i=0;i<=valueofdays;i++)
+		{
+			String textofday=listofdays.get(i).getText();
+			System.out.println("text of the dates" +textofday);
+			
+			if(textofday.equals(date))
+			{
+				driver.findElement(By.xpath("//div[@id='object152022']//canvas//following-sibling::div[2]")).click();
+				break;
+			}
+			
+		}
+		
+		Actions s=new Actions(driver);
+		s.sendKeys(Keys.CONTROL+"S");
+		
+		
+	}
 		
 		
 		

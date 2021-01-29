@@ -11,7 +11,7 @@ import com.hybrid.pageobjects.LoginPage_02;
 import com.hybrid.pageobjects.ProgramCreationForm;
 import com.hybrid.pageobjects.ProjectCreationProjectList;
 
-public class Demotestcase extends Base {
+public class GenericUIValidation extends Base {
 
 	
 	LoginPage_01 login1;
@@ -19,10 +19,7 @@ public class Demotestcase extends Base {
 	Homepage homepage;
 	ProjectCreationProjectList projlist;
 	
-	
-	
-	
-	public Demotestcase()
+	public GenericUIValidation()
 	{
 		super();
 		System.out.println("Calling the super class constructor to initialize the properties of config file");
@@ -88,7 +85,7 @@ public class Demotestcase extends Base {
 		homepage.projectClick();
 		
 		projlist.scrolling();
-		projlist.choosingStartdate_EndDate();
+		projlist.choosingDateFromDateField();
 		
 		
 	}
