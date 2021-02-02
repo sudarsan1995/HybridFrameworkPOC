@@ -6,6 +6,7 @@
       <class name="com.hybrid.testcases.GenericUIValidation">
         <methods>
           <include name="setUp"/>
+          <include name="e_SelectingPortfolio"/>
           <include name="b_loginClick"/>
         </methods>
       </class> <!-- com.hybrid.testcases.GenericUIValidation -->

@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\SU316247\AppData\Local\Temp\testng-eclipse--740349814\testng-customsuite.xml</span>
+                    <span>C:\Users\SU316247\AppData\Local\Temp\testng-eclipse-1762640741\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Default_suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.hybrid.testcases.GenericUIValidation" hash-for-method="b_loginClick">b_loginClick</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -123,7 +109,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.hybrid.testcases.GenericUIValidation" hash-for-method="d_selectingStartAndEndDate">d_selectingStartAndEndDate</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.hybrid.testcases.GenericUIValidation" hash-for-method="b_loginClick">b_loginClick</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.hybrid.testcases.GenericUIValidation" hash-for-method="e_SelectingPortfolio">e_SelectingPortfolio</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -143,59 +134,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.hybrid.testcases.GenericUIValidation</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="b_loginClick">
-                  </a> <!-- b_loginClick -->
-                  <span class="method-name">b_loginClick</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Planisware 6 - Home] but found [Planisware Application Server]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at org.testng.Assert.assertEquals(Assert.java:639)
-	at com.hybrid.testcases.GenericUIValidation.b_loginClick(GenericUIValidation.java:64)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:764)
-	at org.testng.TestRunner.run(TestRunner.java:585)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.runSuites(TestNG.java:1069)
-	at org.testng.TestNG.run(TestNG.java:1037)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -211,9 +149,16 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="d_selectingStartAndEndDate">
-                  </a> <!-- d_selectingStartAndEndDate -->
-                  <span class="method-name">d_selectingStartAndEndDate</span>
+                  <a name="b_loginClick">
+                  </a> <!-- b_loginClick -->
+                  <span class="method-name">b_loginClick</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="e_SelectingPortfolio">
+                  </a> <!-- e_SelectingPortfolio -->
+                  <span class="method-name">e_SelectingPortfolio</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -228,7 +173,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\SU316247\AppData\Local\Temp\testng-eclipse--740349814\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\SU316247\AppData\Local\Temp\testng-eclipse-1762640741\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -279,26 +224,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'd_selectingStartAndEndDate')
+data.setCell(0, 1, 'e_SelectingPortfolio')
 data.setCell(0, 2, 'com.hybrid.testcases.GenericUIValidation')
-data.setCell(0, 3, 45548);
+data.setCell(0, 3, 14468);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'b_loginClick')
 data.setCell(1, 2, 'com.hybrid.testcases.GenericUIValidation')
-data.setCell(1, 3, 3117);
+data.setCell(1, 3, 10641);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'a_LoginCrendentials')
 data.setCell(2, 2, 'com.hybrid.testcases.GenericUIValidation')
-data.setCell(2, 3, 1520);
+data.setCell(2, 3, 1400);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'tearDown')
 data.setCell(3, 2, 'com.hybrid.testcases.GenericUIValidation')
-data.setCell(3, 3, 1);
+data.setCell(3, 3, 3);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 50 seconds</span>
+              <span class="suite-total-time">Total running time: 26 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -331,21 +276,19 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">a_LoginCrendentials</span>
-                <span class="method-start">14032 ms</span>
+                <span class="method-start">17781 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">b_loginClick</span>
-                <span class="method-start">15556 ms</span>
+                <span class="method-start">19187 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">d_selectingStartAndEndDate</span>
-                <span class="method-start">18678 ms</span>
+                <span class="method-name">e_SelectingPortfolio</span>
+                <span class="method-start">29830 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">64228 ms</span>
+                <span class="method-start">44301 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

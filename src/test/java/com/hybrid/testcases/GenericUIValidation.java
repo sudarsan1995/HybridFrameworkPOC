@@ -67,6 +67,7 @@ public class GenericUIValidation extends Base {
 	}
 	
 	/*
+	
 	@Test
 	public void c_addingColumn() throws InterruptedException
 	{
@@ -77,7 +78,7 @@ public class GenericUIValidation extends Base {
 		System.out.println("column added into the view");
 	}
 	
-	*/
+	
 	
 	@Test
 	public void d_selectingStartAndEndDate() throws InterruptedException
@@ -88,6 +89,18 @@ public class GenericUIValidation extends Base {
 		projlist.choosingDateFromDateField();
 		
 		
+	}
+	
+	
+	*/
+	
+	@Test
+	public void e_SelectingPortfolio() throws InterruptedException
+	
+	{
+		homepage.projectClick();
+		Thread.sleep(5000);
+		projlist.selectingPortfolio();
 	}
 	
 	@Test

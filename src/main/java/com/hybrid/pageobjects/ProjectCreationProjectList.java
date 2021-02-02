@@ -53,6 +53,19 @@ public class ProjectCreationProjectList extends Base{
 	@FindBy(xpath="//div[@class='ss-scroll rtl']")
 	WebElement horizontalScrollbar;
 	
+	@FindBy(xpath="(//div[@aria-label='sa'])[2]")
+	WebElement PortfolioDropdown;
+	
+	@FindBy(xpath="//input[@aria-label='Portfolio']")
+	WebElement portfoliotextbox;
+	
+	@FindBy(xpath="//input[@placeholder='Search']")
+	WebElement SearchBoxInsidePortfolioselectionform;
+	
+	@FindBy(xpath="(//table[@role='presentation'])[2]//following-sibling::tbody//tr//td[4]")
+	List<WebElement> listofportoliovalues;
+	
+	
 	public ProjectCreationProjectList()
 	{
 		PageFactory.initElements(driver, this);
@@ -211,12 +224,55 @@ public class ProjectCreationProjectList extends Base{
 			
 		}
 		
-		Actions s=new Actions(driver);
-		s.sendKeys(Keys.CONTROL+"S");
+		
 		
 		
 	}
 		
+	public void selectingPortfolio() throws InterruptedException
+	{
+		
+		String portfolioName="0963-IGT Fixed Systems Equipment";
+		String beforeXpathPortfolioName="(//table[@role='presentation'])[2]//following-sibling::tbody//tr//td[";
+		String afterXpathPortfolioName="]";
+		
+		/*
+		
+		WebElement portfoliodrop = PortfolioDropdown;
+		JavascriptExecutor portfilt = (JavascriptExecutor)driver;
+		portfilt.executeScript("arguments[0].click();", portfoliodrop);
+		
+		*/
+		
+		portfoliotextbox.click();
+		PortfolioDropdown.click();
+		
+		SearchBoxInsidePortfolioselectionform.sendKeys("IGT Fixed");
+		Thread.sleep(3000);
+		
+		List<WebElement > listofportfoliovalues=driver.findElements(By.xpath("(//table[@role='presentation'])[2]//following-sibling::tbody//tr//td[5]"));
+		
+		int SizeofListvalues=listofportfoliovalues.size();
+		System.out.println(SizeofListvalues);
+	
+		
+		for(int i=1;i<=SizeofListvalues;i++)
+		{
+			System.out.println("entered into for loop");
+			String textofvalues=listofportfoliovalues.get(i).getText();
+			System.out.println(textofvalues);
+			
+			if(textofvalues.equals(portfolioName))
+					{
+						i++;
+						System.out.println("entered into if loop");
+						driver.findElement(By.xpath("(//table[@role='presentation'])[2]//following-sibling::tbody//tr//td["+i+"]")).click();
+						System.out.println(textofvalues);
+						break;
+					}
+		}
+		
+	}
 		
 		
 		
