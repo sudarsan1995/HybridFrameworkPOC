@@ -1,0 +1,52 @@
+10:25:03.298 [main] INFO  com.hybrid.baseclass.Base - Values are filled in fields
+10:25:36.350 [main] INFO  com.hybrid.baseclass.Base - browser closed
+12:04:26.783 [main] INFO  com.hybrid.baseclass.Base - Calling the super class constructor to initialize the properties of config file
+12:04:59.547 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware
+12:05:01.455 [main] INFO  com.hybrid.baseclass.Base - user name entered is : 310259920
+12:05:01.455 [main] INFO  com.hybrid.baseclass.Base - password entered is : Planisware@63
+12:05:01.552 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware Application Server
+12:05:34.053 [main] INFO  com.hybrid.baseclass.Base - clicked on Program module 
+12:05:38.679 [main] INFO  com.hybrid.baseclass.Base - Retriving data from getTestData method available in testutils class
+12:05:38.743 [main] INFO  com.hybrid.baseclass.Base - clicked on New Program 
+12:05:53.451 [main] INFO  com.hybrid.baseclass.Base - Values are filled in fields
+12:06:04.179 [main] INFO  com.hybrid.baseclass.Base - valuidated the program created is avaiable in program list and open and close the program
+12:06:28.821 [main] INFO  com.hybrid.baseclass.Base - clicked on main menu 
+12:06:29.430 [main] INFO  com.hybrid.baseclass.Base - clicked on logout 
+12:09:09.051 [main] INFO  com.hybrid.baseclass.Base - Calling the super class constructor to initialize the properties of config file
+12:09:27.802 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware
+12:09:31.876 [main] INFO  com.hybrid.baseclass.Base - user name entered is : 310259920
+12:09:31.876 [main] INFO  com.hybrid.baseclass.Base - password entered is : Planisware@63
+12:09:31.951 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware Application Server
+12:09:41.044 [main] INFO  com.hybrid.baseclass.Base - clicked on login button
+12:09:41.055 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware 6 - Home
+12:09:42.491 [main] INFO  com.hybrid.baseclass.Base - clicked on Program module 
+12:09:43.584 [main] INFO  com.hybrid.baseclass.Base - Retriving data from getTestData method available in testutils class
+12:09:44.469 [main] INFO  com.hybrid.baseclass.Base - clicked on New Program 
+12:09:59.795 [main] INFO  com.hybrid.baseclass.Base - Values are filled in fields
+12:10:10.804 [main] INFO  com.hybrid.baseclass.Base - valuidated the program created is avaiable in program list and open and close the program
+12:10:33.858 [main] INFO  com.hybrid.baseclass.Base - clicked on main menu 
+12:10:35.142 [main] INFO  com.hybrid.baseclass.Base - clicked on logout 
+12:10:38.784 [main] INFO  com.hybrid.baseclass.Base - browser closed
+12:11:06.039 [main] INFO  com.hybrid.baseclass.Base - right clicked no column in program list 
+12:11:15.564 [main] INFO  com.hybrid.baseclass.Base - clicked on project module
+12:11:36.222 [main] INFO  com.hybrid.baseclass.Base - clicked on project module
+12:11:49.117 [main] INFO  com.hybrid.baseclass.Base - selected the portfolio on project list
+19:26:10.787 [main] INFO  com.hybrid.baseclass.Base - Calling the super class constructor to initialize the properties of config file
+19:26:34.436 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware
+19:26:37.876 [main] INFO  com.hybrid.baseclass.Base - user name entered is : 310259920
+19:26:37.876 [main] INFO  com.hybrid.baseclass.Base - password entered is : Planisware@63
+19:26:38.027 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware Application Server
+19:27:47.121 [main] INFO  com.hybrid.baseclass.Base - Calling the super class constructor to initialize the properties of config file
+19:28:16.702 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware
+19:28:20.294 [main] INFO  com.hybrid.baseclass.Base - user name entered is : 310259920
+19:28:20.294 [main] INFO  com.hybrid.baseclass.Base - password entered is : Planisware@63
+19:28:20.316 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware Application Server
+19:28:32.823 [main] INFO  com.hybrid.baseclass.Base - clicked on login button
+19:28:32.830 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware 6 - Home
+19:29:13.493 [main] INFO  com.hybrid.baseclass.Base - Retriving data from getTestData method available in testutils class
+19:29:44.839 [main] INFO  com.hybrid.baseclass.Base - Calling the super class constructor to initialize the properties of config file
+19:30:32.674 [main] INFO  com.hybrid.baseclass.Base - Calling the super class constructor to initialize the properties of config file
+19:30:55.637 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware
+19:30:57.393 [main] INFO  com.hybrid.baseclass.Base - user name entered is : 310259920
+19:30:57.394 [main] INFO  com.hybrid.baseclass.Base - password entered is : Planisware@63
+19:30:57.413 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware Application Server

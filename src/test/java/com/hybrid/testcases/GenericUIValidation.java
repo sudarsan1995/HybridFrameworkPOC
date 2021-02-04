@@ -44,10 +44,10 @@ public class GenericUIValidation extends Base {
 		
 		String titleofpage=login1.validateTitleOfPage();
 		Assert.assertEquals(titleofpage, "Planisware");
-		System.out.println("title of this page is : " +titleofpage);
+		logger.info("title of this page is : " +titleofpage);
 		login1.enterCrendentials(pro.getProperty("un"), pro.getProperty("pwd"));
-		System.out.println("user name entered is : " +pro.getProperty("un"));
-		System.out.println("password entered is : " +pro.getProperty("pwd"));
+		logger.info("user name entered is : " +pro.getProperty("un"));
+		logger.info("password entered is : " +pro.getProperty("pwd"));
 		
 	}
 	
@@ -57,26 +57,27 @@ public class GenericUIValidation extends Base {
 		
 		String titleofpage=login2.validatePageTitle();
 		Assert.assertEquals(titleofpage, "Planisware Application Server");
-		System.out.println("title of this page is : " +titleofpage);
+		logger.info("title of this page is : " +titleofpage);
 		login2.loginClick();
-		System.out.println("clicked on login button");
+		logger.info("clicked on login button");
 		String homepagetitle=login2.validatePageTitle();
 		Assert.assertEquals(homepagetitle, "Planisware 6 - Home");
-		System.out.println("title of this page is : " +homepagetitle);
+		logger.info("title of this page is : " +homepagetitle);
 		
 	}
 	
-	/*
+
 	
 	@Test
 	public void c_addingColumn() throws InterruptedException
 	{
 		homepage.programClick();
-		System.out.println("righ clicked");
+		logger.info("right clicked no column in program list ");
 		Thread.sleep(3000);
 		projlist.addingColumn();
-		System.out.println("column added into the view");
+		logger.info("column added into the view");
 	}
+	
 	
 	
 	
@@ -84,30 +85,48 @@ public class GenericUIValidation extends Base {
 	public void d_selectingStartAndEndDate() throws InterruptedException
 	{
 		homepage.projectClick();
+		logger.info("clicked on project module");
 		
 		projlist.scrolling();
-		projlist.choosingDateFromDateField();
+		logger.info("scrolled to point the satr date of project");
 		
+		projlist.choosingDateFromDateField();
+		logger.info(" desired date choosen in start date field");
 		
 	}
 	
 	
-	*/
+
 	
 	@Test
 	public void e_SelectingPortfolio() throws InterruptedException
 	
 	{
 		homepage.projectClick();
+		logger.info("clicked on project module");
+		
 		Thread.sleep(5000);
 		projlist.selectingPortfolio();
+		
+		logger.info("selected the portfolio on project list");
 	}
+	
+	
+	@Test
+	public void f_logOut()
+	{
+		homepage.mainMenu();
+		logger.info("clicked on main menu ");
+		homepage.logOut();
+		logger.info("clicked on logout ");
+	}
+
 	
 	@Test
 	public void tearDown()
 	{
 		
-		//driver.close();
+		driver.close();
 	}
 	
 }

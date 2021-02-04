@@ -8,14 +8,23 @@
     <classes>
       <class name="com.hybrid.testcases.LoginFunctionality">
         <methods>
-          <include name="a_LoginCrendentials"/>
           <include name="tearDown"/>
-          <include name="d_clickEvent"/>
           <include name="setUp"/>
-          <include name="b_loginClick"/>
-          <include name="c_ProgramCreation"/>
+          <include name="f_validatePopupInProgramCreationForm"/>
         </methods>
       </class> <!-- com.hybrid.testcases.LoginFunctionality -->
     </classes>
   </test> <!-- Test(failed) -->
+  <test thread-count="5" name="Test1(failed)">
+    <classes>
+      <class name="com.hybrid.testcases.GenericUIValidation">
+        <methods>
+          <include name="setUp"/>
+          <include name="c_addingColumn"/>
+          <include name="d_selectingStartAndEndDate"/>
+          <include name="f_logOut"/>
+        </methods>
+      </class> <!-- com.hybrid.testcases.GenericUIValidation -->
+    </classes>
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

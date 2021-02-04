@@ -181,6 +181,7 @@ public class ProgramCreationForm extends Base {
 		programcreationbutton.click();
 		ok.click();
 		Assert.assertTrue(alertpopup.isDisplayed(), "Alert getting displayed");
+		Thread.sleep(2000);
 		alertpopupOkButton.click();
 		Thread.sleep(3000);
 		closecreationform.click();

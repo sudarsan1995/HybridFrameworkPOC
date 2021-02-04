@@ -80,13 +80,12 @@ public class ProjectCreationProjectList extends Base{
 		String passingvalue="has business case";
 		String BefXpathofListOfOPtionsToSelectInsertColumn="//table[@class='menu']//tbody//tr[";
 		String AfXpathofListOfOPtionsToSelectInsertColumn="]";
-		String beforeXpathOfListOfValueInSuggestionList="(//table[@class='treeView'])[";
-		String afterXpathOfListOfValueInSuggestionList="]";
+		String xpathoflistvalues="//table[@class='treeView']";
+		String columnname="Has A Business Case ?";
 	
 		
 		Actions s=new Actions(driver);
 		s.moveToElement(projectlistcolumn).contextClick().build().perform();
-		
 		
 		for(int i=1;i<=4;i++)
 		{
@@ -104,37 +103,34 @@ public class ProjectCreationProjectList extends Base{
 		searchboxinInsertColumnwindow.sendKeys(Keys.CONTROL+ "a");
 		searchboxinInsertColumnwindow.sendKeys(Keys.DELETE);
 		searchboxinInsertColumnwindow.sendKeys(passingvalue);
+		Thread.sleep(2000);
+		
+		
+		List<WebElement> listofvalues=driver.findElements(By.xpath(xpathoflistvalues));
+		
+		int sizeoflist=listofvalues.size();
+		
+		for(int i=0;i<=sizeoflist;i++)
+		{
+			String nameofcolumn=listofvalues.get(i).getText();
+			
+			if(nameofcolumn.contains(columnname))
+			{
+				listofvalues.get(i).click();
+				break;
+			}
+		}
+		
 		
 		Thread.sleep(3000);
-		
-		for(int j=1;j<=5;j++)
-		{
-			String columnname=driver.findElement(By.xpath(beforeXpathOfListOfValueInSuggestionList+j+afterXpathOfListOfValueInSuggestionList)).getText();
-			
-			if(columnname.equals("Has A Business Case ?"))
-			{
-				Assert.assertTrue(true);
-				WebElement value=driver.findElement(By.xpath(beforeXpathOfListOfValueInSuggestionList+j+afterXpathOfListOfValueInSuggestionList));
-				Thread.sleep(3000);
-				value.click();
-				Thread.sleep(2000);
-				Ok.click();
-				break;	
-			}
-			
-			else {
-				Assert.assertTrue(false);
-			}
-
-			
-		}
+		Ok.click();
 		
 	}
 	
 	public void scrolling() throws InterruptedException
 	{
 		
-		WebElement startdate=driver.findElement(By.xpath("(//table[@role='presentation'])[2]//colgroup//following-sibling::tbody[1]//tr[1]//td[20]"));
+		WebElement startdate=driver.findElement(By.xpath("(//table[@role='presentation'])[2]//colgroup//following-sibling::tbody[1]//tr[1]//td[17]"));
 		
 		 
 		JavascriptExecutor je= (JavascriptExecutor) driver;
@@ -233,8 +229,8 @@ public class ProjectCreationProjectList extends Base{
 	{
 		
 		String portfolioName="0963-IGT Fixed Systems Equipment";
-		String beforeXpathPortfolioName="(//table[@role='presentation'])[2]//following-sibling::tbody//tr//td[";
-		String afterXpathPortfolioName="]";
+		String beforeXpathPortfolioName="(//table[@role='presentation'])[2]//following-sibling::tbody//tr[";
+		String afterXpathPortfolioName="]//td[5]";
 		
 		/*
 		
@@ -253,8 +249,7 @@ public class ProjectCreationProjectList extends Base{
 		List<WebElement > listofportfoliovalues=driver.findElements(By.xpath("(//table[@role='presentation'])[2]//following-sibling::tbody//tr//td[5]"));
 		
 		int SizeofListvalues=listofportfoliovalues.size();
-		System.out.println(SizeofListvalues);
-	
+		
 		
 		for(int i=1;i<=SizeofListvalues;i++)
 		{
@@ -264,9 +259,9 @@ public class ProjectCreationProjectList extends Base{
 			
 			if(textofvalues.equals(portfolioName))
 					{
-						i++;
+						
 						System.out.println("entered into if loop");
-						driver.findElement(By.xpath("(//table[@role='presentation'])[2]//following-sibling::tbody//tr//td["+i+"]")).click();
+						listofportfoliovalues.get(i).click();
 						System.out.println(textofvalues);
 						break;
 					}

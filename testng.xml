@@ -11,6 +11,14 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.hybrid.testcases.LoginFunctionality"/>
+      
     </classes>
   </test> <!-- Test -->
+  
+   <test thread-count="5" name="Test1">
+    <classes>
+      <class name="com.hybrid.testcases.GenericUIValidation"/>
+      
+    </classes>
+  </test>
 </suite> <!-- Suite -->

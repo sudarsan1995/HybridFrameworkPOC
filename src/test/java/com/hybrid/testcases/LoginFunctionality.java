@@ -101,6 +101,7 @@ public class LoginFunctionality extends Base{
 	public void e_validateCreatedProgramAndClosetheProgram() throws InterruptedException
 	{
 		programcreation.validateProgram();
+		logger.info("valuidated the program created is avaiable in program list and open and close the program");
 		
 	}
 	
@@ -120,19 +121,22 @@ public class LoginFunctionality extends Base{
 	{
 		
 		programcreation.validatePopupInProgramCreationForm();	
+		logger.info("validated if manadatory fields not filled but proceeding ok see pop-up is thrown or not");
 	}
 	
 	@Test
 	public void g_logOut()
 	{
 		homepage.mainMenu();
+		logger.info("clicked on main menu ");
 		homepage.logOut();
+		logger.info("clicked on logout ");
 	}
 	
 	@AfterTest
 	public void tearDown()
 	{
-		//driver.close();
+		driver.close();
 		logger.info("browser closed");
 	}
 
