@@ -49,7 +49,7 @@ public class Base {
 		
 		else if (desiredbrowser.equals("firefox"))
 		{
-			System.setProperty("webdriver.chrome.driver", TestUtils.firefoxdriver);
+			System.setProperty("webdriver.gecko.driver", TestUtils.firefoxdriver);
 			driver=new FirefoxDriver();
 		}
 		

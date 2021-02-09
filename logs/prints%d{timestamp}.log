@@ -28,3 +28,26 @@
 19:53:47.844 [main] INFO  com.hybrid.baseclass.Base - clicked on main menu 
 19:53:49.418 [main] INFO  com.hybrid.baseclass.Base - clicked on logout 
 19:53:52.645 [main] INFO  com.hybrid.baseclass.Base - browser closed
+11:26:15.577 [main] INFO  com.hybrid.baseclass.Base - Calling the super class constructor to initialize the properties of config file
+11:26:53.613 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware
+11:26:57.466 [main] INFO  com.hybrid.baseclass.Base - user name entered is : 310259920
+11:26:57.466 [main] INFO  com.hybrid.baseclass.Base - password entered is : Planisware@63
+11:26:57.528 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware Application Server
+11:27:00.595 [main] INFO  com.hybrid.baseclass.Base - clicked on login button
+11:29:52.225 [main] INFO  com.hybrid.baseclass.Base - Calling the super class constructor to initialize the properties of config file
+11:29:58.811 [main] INFO  com.hybrid.baseclass.Base - Retriving data from getTestData method available in testutils class
+11:38:19.129 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware
+11:38:24.256 [main] INFO  com.hybrid.baseclass.Base - user name entered is : 310259920
+11:38:24.257 [main] INFO  com.hybrid.baseclass.Base - password entered is : Planisware@63
+11:38:24.284 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware Application Server
+11:38:32.532 [main] INFO  com.hybrid.baseclass.Base - clicked on login button
+11:39:14.902 [main] INFO  com.hybrid.baseclass.Base - clicked on main menu 
+11:39:30.826 [main] INFO  com.hybrid.baseclass.Base - clicked on logout 
+11:41:00.654 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware
+11:41:02.703 [main] INFO  com.hybrid.baseclass.Base - user name entered is : 310259920
+11:41:02.704 [main] INFO  com.hybrid.baseclass.Base - password entered is : Planisware@63
+11:41:02.723 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware Application Server
+11:41:13.655 [main] INFO  com.hybrid.baseclass.Base - clicked on login button
+11:41:13.670 [main] INFO  com.hybrid.baseclass.Base - title of this page is : Planisware 6 - Home
+11:41:38.628 [main] INFO  com.hybrid.baseclass.Base - clicked on project module
+11:41:48.832 [main] INFO  com.hybrid.baseclass.Base - clicked on project module

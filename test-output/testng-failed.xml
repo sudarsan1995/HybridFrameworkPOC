@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.hybrid.testcases.LoginFunctionality">
+      <class name="com.hybrid.testcases.GenericUIValidation">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="c_ProgramCreation"/>
-          <include name="f_validatePopupInProgramCreationForm"/>
-          <include name="e_validateCreatedProgramAndClosetheProgram"/>
+          <include name="c_addingColumn"/>
+          <include name="d_selectingStartAndEndDate"/>
+          <include name="e_SelectingPortfolio"/>
+          <include name="f_logOut"/>
         </methods>
-      </class> <!-- com.hybrid.testcases.LoginFunctionality -->
+      </class> <!-- com.hybrid.testcases.GenericUIValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

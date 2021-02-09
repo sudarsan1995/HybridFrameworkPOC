@@ -21,8 +21,8 @@ import com.hybrid.baseclass.Base;
 
 public class TestUtils extends Base{
 
-	public static long Implicit_Wait=20;
-	public static long Page_Load_Timeout=10;
+	public static long Implicit_Wait=10;
+	public static long Page_Load_Timeout=40;
 
 	public static String desiredbrowser=pro.getProperty("browser");
 	public static String chromedriver=pro.getProperty("chromebrowser");

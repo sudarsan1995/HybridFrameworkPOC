@@ -8,9 +8,15 @@
     <classes>
       <class name="com.hybrid.testcases.LoginFunctionality">
         <methods>
+          <include name="a_LoginCrendentials"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="b_loginClick"/>
+          <include name="c_ProgramCreation"/>
+          <include name="d_enteringDataInProgramCreationForm"/>
           <include name="f_validatePopupInProgramCreationForm"/>
+          <include name="e_validateCreatedProgramAndClosetheProgram"/>
+          <include name="g_logOut"/>
         </methods>
       </class> <!-- com.hybrid.testcases.LoginFunctionality -->
     </classes>
@@ -22,7 +28,11 @@
           <include name="setUp"/>
           <include name="c_addingColumn"/>
           <include name="d_selectingStartAndEndDate"/>
+          <include name="e_SelectingPortfolio"/>
           <include name="f_logOut"/>
+          <include name="tearDown"/>
+          <include name="a_LoginCrendentials"/>
+          <include name="b_loginClick"/>
         </methods>
       </class> <!-- com.hybrid.testcases.GenericUIValidation -->
     </classes>

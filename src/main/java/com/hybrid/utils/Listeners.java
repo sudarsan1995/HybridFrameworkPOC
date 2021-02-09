@@ -20,8 +20,7 @@ public class Listeners extends Base implements ITestListener {
 
 
   	public ExtentTest logger;
-	
-  	ExtentReports extent=ExtendReporting.reportGeneration();
+	ExtentReports extent=ExtendReporting.reportGeneration();
 	
 	@Override
 	public void onTestStart(ITestResult result) {
