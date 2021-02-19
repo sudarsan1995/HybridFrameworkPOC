@@ -75,5 +75,10 @@ public class Base {
 		driver.get(pro.getProperty("url"));
 		
 	}
+	
+	public void tearDown()
+	{
+		driver.close();
+	}
 
 }
